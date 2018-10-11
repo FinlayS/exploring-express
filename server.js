@@ -7,7 +7,6 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    //res.send('<h1>Hello Express!</h1>')
 
     res.render('home.hbs', {
         pageTitle: 'Home Page',
@@ -23,8 +22,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-
-// bad  - send back json with errorMessage
 app.get('/bad', (req, res) =>{
     res.send({
         statusCode: 400,
