@@ -36,7 +36,6 @@ hbs.registerHelper('screamIt', (text) => {
 });
 
 app.get('/', (req, res) => {
-
     res.render('home.hbs', {
         pageTitle: 'Home Page',
         welcomeMessage: 'Welcome to the home page of this project',
@@ -53,6 +52,12 @@ app.get('/bad', (req, res) =>{
     res.send({
         statusCode: 400,
         errorMessage: 'Bad Request'
+    })
+});
+
+app.get('/projects', (req, res) =>{
+    res.render('projects.hbs',{
+        pageTitle: 'Projects Page'
     })
 });
 
